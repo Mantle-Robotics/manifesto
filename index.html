@@ -1,0 +1,222 @@
+<title>Mantle Robotics</title>
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --ink:#141412;
+    --ink-2:#4A4A46;
+    --mute:#8A8A84;
+    --rule:#E6E5E1;
+    --rule-strong:#C9C8C2;
+    --font:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    --col:39rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F0F0E; --ink:#F1F0EC; --ink-2:#BDBCB6; --mute:#7C7B75; --rule:#262623; --rule-strong:#3B3A36;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F0F0E; --ink:#F1F0EC; --ink-2:#BDBCB6; --mute:#7C7B75; --rule:#262623; --rule-strong:#3B3A36;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--font); font-size:17px; line-height:1.6;
+    padding-inline:clamp(16px,5vw,48px); padding-block:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; text-decoration-color:var(--rule-strong)}
+  a:hover{text-decoration-color:var(--ink)}
+  a:focus-visible{outline:2px solid var(--ink); outline-offset:3px; border-radius:2px}
+  .wrap{max-width:var(--col); margin:0 auto}
+
+  nav{
+    display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;
+    padding-block:28px 0; max-width:var(--col); margin:0 auto;
+  }
+  .wordmark{font-weight:500; font-size:1.05rem; letter-spacing:-.01em; text-decoration:none}
+  nav ul{list-style:none; margin:0; padding:0; display:flex; gap:22px}
+  nav li a{font-size:.85rem; text-decoration:none; color:var(--ink-2)}
+  nav li a:hover{color:var(--ink)}
+
+  header.hero{padding-block:clamp(72px,14vh,140px) clamp(56px,9vh,96px)}
+  .hero h1{
+    font-weight:400; font-size:clamp(2rem,4.8vw,2.8rem);
+    line-height:1.15; letter-spacing:-.025em; margin:0 0 28px; text-wrap:balance;
+  }
+  .hero p{font-size:1.05rem; color:var(--ink-2); max-width:34em; margin:0 0 14px}
+  .note{font-size:.9rem; color:var(--mute); max-width:34em}
+
+  section{padding-block:56px; border-top:1px solid var(--rule)}
+  .eyebrow{font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color:var(--mute); margin:0 0 28px}
+  h2{font-weight:500; font-size:1.6rem; line-height:1.25; letter-spacing:-.02em; margin:0 0 22px; text-wrap:balance}
+  h3{font-weight:700; font-size:1.15rem; line-height:1.3; margin:44px 0 8px; letter-spacing:-.015em}
+  h3 + p{margin-top:0}
+  p{margin:0 0 20px; max-width:34em}
+  p.lede{font-size:1.3rem; line-height:1.4; letter-spacing:-.015em; color:var(--ink)}
+  blockquote{margin:36px 0; padding-left:20px; border-left:1px solid var(--rule-strong); font-size:1.2rem; line-height:1.4; letter-spacing:-.01em; color:var(--ink-2); max-width:30em}
+  blockquote p{margin:0}
+  cite{display:block; font-style:normal; font-size:.78rem; color:var(--mute); margin-top:12px}
+
+  .goals{list-style:none; margin:8px 0 0; padding:0}
+  figure.chart{margin:36px 0 44px; padding:0; max-width:34em}
+  figure.chart figcaption{font-size:.85rem; color:var(--ink-2); margin-bottom:12px}
+  figure.chart svg{display:block; width:100%; height:auto; max-width:100%}
+  figure.chart .source{font-size:.78rem; color:var(--mute); margin:10px 0 0; line-height:1.5}
+  .goals li{display:grid; grid-template-columns:5.5rem 1fr; gap:20px; padding-block:20px; border-top:1px solid var(--rule)}
+  .goals li:last-child{border-bottom:1px solid var(--rule)}
+  .goals .when{font-size:.8rem; color:var(--mute); padding-top:4px}
+  .goals strong{display:block; font-weight:500; font-size:1.05rem; margin-bottom:6px}
+  .goals p{margin:0; color:var(--ink-2); font-size:.98rem}
+  @media (max-width:520px){ .goals li{grid-template-columns:1fr; gap:6px} }
+
+  .team{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:0 32px}
+  .team li{padding-block:16px; border-top:1px solid var(--rule)}
+  .team strong{display:block; font-weight:500}
+  .team span{color:var(--ink-2); font-size:.95rem}
+  @media (max-width:520px){ .team{grid-template-columns:1fr} }
+
+  footer{border-top:1px solid var(--rule); padding-block:32px 48px; max-width:var(--col); margin:0 auto; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:.78rem; color:var(--mute)}
+  @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+</style>
+
+<nav>
+  <a class="wordmark" href="#top">Mantle Robotics</a>
+  <ul>
+    <li><a href="#manifesto">Manifesto</a></li>
+    <li><a href="#deepdive">Problem</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+</nav>
+
+<div class="wrap" id="top">
+
+  <header class="hero">
+    <h1>Automate underground drills. Then the whole mine.</h1>
+    <p>Underground mining has stayed stagnant and archaic for the last 50 years, while technology, and robotics in particular, has advanced rapidly. We are going to change that, starting with retrofit kits that automate the jumbo drills mines already own, and ending with a mine that runs with no one in it.</p>
+  </header>
+
+  <section id="manifesto">
+    <p class="eyebrow">Manifesto</p>
+    <h2>Real work, not demos</h2>
+
+    <p class="lede">The most valuable robots are not the ones that look the most like people. They are the ones that quietly finish a shift.</p>
+
+    <p>Robotics is having its demo era. Humanoids fold laundry on stage and general-purpose models pick objects off tables. We think the field's real test is different: can a machine take over a job that is dangerous, repetitive, and paid for by the hour, in an environment that fights it? Underground hard rock mining is that test. It is dark, wet, dusty, GPS-denied, and unforgiving of failure.</p>
+
+    <h3>Zero people in the tunnel</h3>
+    <p>The Boring Company built its tunnelling program around a single constraint: zero people in the tunnel. It is not a safety slogan. It is a design methodology. When you refuse to let a person into the workspace, every task has to be re-examined, instrumented, and handed to a machine, and the system that emerges is faster and cheaper than the one it replaced, because it was never designed around a human's reach, sight, and shift length.</p>
+    <p>Two of us worked in those tunnels alongside ex-miners. We want to bring that constraint, and that way of thinking, to the mine.</p>
+
+    <blockquote>
+      <p>Zero people at the face. Then zero people in the heading. Then zero people underground.</p>
+      <cite>The order of operations</cite>
+    </blockquote>
+
+    <h3>Start with the drill</h3>
+    <p>A retrofit kit is the honest first step. Mines already own working jumbos and cannot justify replacing them. So automate what is there: perception, boom control, and pattern execution bolted onto the rig a crew already trusts, with the operator moved out of the face and eventually out of the loop.</p>
+
+    <h3>Then the whole mine</h3>
+    <p>Drilling is one step in a cycle: drill, charge, blast, ventilate, muck, scale, bolt, repeat. Once the drill is autonomous, the next step is the layer that sequences all of them: an orchestration system that dispatches a fleet of specialized machines through the cycle, understands the state of every heading, predicts where the cycle will stall, and controls it. Digitize the mine, then run it lights out.</p>
+  </section>
+
+  <section id="deepdive">
+    <p class="eyebrow">The problem</p>
+    <h2>Demand is going one way. The workforce is going the other.</h2>
+
+    <h3>Everything modern is made of rock</h3>
+    <p>Electric vehicles, grid batteries, transmission lines, wind turbines, and the data centres behind AI all run on copper, lithium, nickel, cobalt, and rare earths. There is no software substitute for a tonne of copper. The IEA expects lithium demand to grow fivefold by 2040 and projects a 30 percent shortfall in copper supply by 2035 under current policies, with roughly $500 billion of new mining investment needed to close the gap. A large share of that metal sits in hard rock orebodies that can only be reached underground.</p>
+
+    <h3>The people who know how to get it out are leaving</h3>
+    <p>In the United States alone, the Society for Mining, Metallurgy &amp; Exploration expects 221,000 mining workers to retire by 2029. That is more than half the country's mining workforce. Fewer people are entering than leaving, and the ones leaving carry decades of judgement about rock that has never been written down. Mines will have to produce more metal with fewer people underground whether or not anyone builds the machines to do it.</p>
+
+    <h3>And productivity has gone backwards</h3>
+    <p>Over the same period that manufacturing more than doubled its labour productivity and agriculture grew by half, mining's fell by half. McKinsey attributes the slide to deeper pits, longer hauls, declining grades, and a lost decade of innovation, and warns that without a step change the industry cannot meet the demand above.</p>
+
+    <figure class="chart">
+      <figcaption>Labour productivity by sector, 1997 to 2023 (1997 = 100)</figcaption>
+      <svg viewBox="0 0 560 190" role="img" aria-label="Bar chart: by 2023 manufacturing productivity index is about 210, agriculture about 155, mining about 50, against a 1997 baseline of 100">
+        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">
+          <!-- baseline at 100: x = 150 + 100*1.75 = 325 -->
+          <line x1="325" y1="8" x2="325" y2="160" stroke="var(--rule-strong)" stroke-dasharray="3 4"/>
+          <text x="325" y="180" text-anchor="middle" fill="var(--mute)" font-size="11">1997 = 100</text>
+
+          <text x="140" y="35" text-anchor="end" fill="var(--ink-2)">Manufacturing</text>
+          <rect x="150" y="22" width="367" height="18" fill="var(--rule-strong)"/>
+          <text x="522" y="35" fill="var(--ink-2)" font-size="12">×2</text>
+
+          <text x="140" y="85" text-anchor="end" fill="var(--ink-2)">Agriculture</text>
+          <rect x="150" y="72" width="271" height="18" fill="var(--rule-strong)"/>
+          <text x="426" y="85" fill="var(--ink-2)" font-size="12">×1.5</text>
+
+          <text x="140" y="135" text-anchor="end" fill="var(--ink)" font-weight="500">Mining</text>
+          <rect x="150" y="122" width="88" height="18" fill="var(--ink)"/>
+          <text x="243" y="135" fill="var(--ink)" font-size="12" font-weight="500">×0.5</text>
+        </g>
+      </svg>
+      <p class="source">Source: McKinsey &amp; Company, <a href="https://www.mckinsey.com/industries/metals-and-mining/our-insights/unearthing-a-new-era-of-innovation-in-mining" target="_blank" rel="noopener">Unearthing a new era of innovation in mining</a> (December 2025), OECD data. Bars drawn from the report's stated multiples.</p>
+    </figure>
+
+    <h3>The face has not changed</h3>
+    <p>The machines at the drill face have gotten bigger, electric, and better instrumented. The workflow around them has not moved. A person still stands at the face, aligns the boom by eye, drills the pattern, charges it, retreats, and waits for the blast. The drill-and-blast cycle that produces most of the world's hard rock metal is run the way it was run fifty years ago, with better hardware and the same human in the same place.</p>
+
+    <h3>What operators told us</h3>
+    <p>We have spoken with over a dozen people who run or have run underground operations. The automation the incumbents sell is priced for a new multi-million dollar machine, not for the fleet a mid-tier mine already runs.</p>
+
+    <h3>Everyone is chasing the surface</h3>
+    <p>The autonomy that exists in mining is mostly above ground: haul trucks on open-pit ramps, surface drill rigs on flat benches. That is the low-hanging fruit, and it is largely picked. Underground is harder, so it has been left alone. That is exactly why it is worth doing.</p>
+
+    <h3>Why a retrofit, not a new machine</h3>
+    <p>The incumbents (Sandvik, Epiroc, and the automation firms they have acquired) sell autonomy bundled with new equipment. A mid-tier mine running older rigs has no path to it. A kit that fits the machines already on site is the only way that mine gets automated this decade.</p>
+    <p>Each kit is also a sensor. Every hole drilled teaches us the rock, the rig, and the cycle. Because we are not an equipment maker, we can sit across every brand on site, which is a data position the equipment makers cannot take.</p>
+  </section>
+
+  <section id="goals">
+    <p class="eyebrow">Goals</p>
+    <h2>What we want to prove</h2>
+    <ul class="goals">
+      <li>
+        <span class="when">First</span>
+        <div>
+          <strong>Drill a pattern with no one at the face</strong>
+          <p>A retrofit kit on a real jumbo, at a real test mine, executing a drill pattern with the operator out of the heading.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Then</span>
+        <div>
+          <strong>Run one full cycle</strong>
+          <p>Drill, charge, blast, muck, scale, bolt, with a specialized machine handling each step and a person only supervising.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">Eventually</span>
+        <div>
+          <strong>Run a heading lights out</strong>
+          <p>An orchestration layer that knows the state of every heading, predicts the next stall, and dispatches the fleet through the cycle without a person underground.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <p class="eyebrow">Team</p>
+    <h2>Five engineers who have been underground</h2>
+    <p>We are mechatronics engineering students at the University of Waterloo. We co-founded and built WatDIG, Canada's first student tunnel boring machine, and won The Boring Company's underground autonomous navigation challenge with it. Between us we have worked at Tesla, The Boring Company, Impossible Metals, Hermeus, Ford, and Clearpath, building autonomous machines for tunnels, the deep sea, and the factory floor.</p>
+    <ul class="team">
+      <li><strong>Matthew Bridger</strong><span>Hydraulics &amp; field</span></li>
+      <li><strong>Jivan Kesan</strong><span>Software &amp; autonomy</span></li>
+      <li><strong>Arjun Mandair</strong><span>Electrical</span></li>
+      <li><strong>Kishan Muhundhan</strong><span>Robotics hardware</span></li>
+      <li><strong>Shiv Patel</strong><span>Robotics hardware</span></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <span>Mantle Robotics · Waterloo, Ontario</span>
+  <span>2026</span>
+</footer>
