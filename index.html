@@ -81,6 +81,18 @@
 
   footer{border-top:1px solid var(--rule); padding-block:32px 48px; max-width:var(--col); margin:0 auto; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:.78rem; color:var(--mute)}
   @media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+
+  .stats{list-style:none; margin:28px 0 8px; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:0 28px; max-width:34em}
+  .stats li{padding-block:16px; border-top:1px solid var(--rule)}
+  .stats .num{display:block; font-size:1.7rem; font-weight:500; letter-spacing:-.02em; line-height:1.1; font-variant-numeric:tabular-nums}
+  .stats .num small{font-size:.9rem; font-weight:400; color:var(--ink-2); letter-spacing:0}
+  .stats .lbl{display:block; font-size:.88rem; color:var(--ink-2); margin-top:6px; line-height:1.4}
+  .stats .src{display:block; font-size:.74rem; color:var(--mute); margin-top:4px}
+  @media (max-width:520px){ .stats{grid-template-columns:1fr} }
+
+  figure.photo{margin:32px 0 0; padding:0}
+  figure.photo img{display:block; width:100%; height:auto; max-width:100%; border-radius:4px}
+  figure.photo figcaption{font-size:.78rem; color:var(--mute); margin-top:10px}
 </style>
 
 <nav>
@@ -97,7 +109,7 @@
 
   <header class="hero">
     <h1>Automate underground drills. Then the whole mine.</h1>
-    <p>Underground mining has stayed stagnant and archaic for the last 50 years, while technology, and robotics in particular, has advanced rapidly. We are going to change that, starting with retrofit kits that automate the jumbo drills mines already own, and ending with a mine that runs with no one in it.</p>
+    <p>Underground mining has stayed stagnant and archaic for the last 50 years, while technology, and robotics in particular, has advanced rapidly. We are going to change that. First, retrofit kits that automate the jumbo drills mines already own. Then every other task in the drill and blast cycle, so the whole cycle runs faster. Eventually, a mine with no one in it, which no longer has to plan around shift changes, travel time, fatigue, or keeping people safe underground, because there is nobody underground.</p>
   </header>
 
   <section id="manifesto">
@@ -134,31 +146,59 @@
     <h3>The people who know how to get it out are leaving</h3>
     <p>In the United States alone, the Society for Mining, Metallurgy &amp; Exploration expects 221,000 mining workers to retire by 2029. That is more than half the country's mining workforce. Fewer people are entering than leaving, and the ones leaving carry decades of judgement about rock that has never been written down. Mines will have to produce more metal with fewer people underground whether or not anyone builds the machines to do it.</p>
 
+    <h3>More is being asked of mining than ever</h3>
+    <p>The pressure is coming from two directions at once. A technology-fuelled fourth industrial revolution is pulling on the supply side: every data centre, battery, motor, and transmission line is a claim on metal that has to come out of the ground. And societal expectations are rising on the other side: less land disturbed, less water and energy per tonne, fewer people put in harm's way, and a licence to operate that has to be re-earned every year. To meet the growing demand for metals and minerals, the industry needs to deliver more of them, and do so more efficiently, more safely, and with a smaller footprint. It cannot do that by adding people, and it cannot do that with the workflow it has.</p>
+
+    <h3>The numbers behind the problem</h3>
+    <ul class="stats">
+      <li><span class="num">29 <small>years</small></span><span class="lbl">Average time from discovery to production for a new mine in the United States. Canada is 27. Only Zambia is slower.</span><span class="src">S&amp;P Global, 2024</span></li>
+      <li><span class="num">221,000</span><span class="lbl">US mining workers expected to retire by 2029, more than half the workforce.</span><span class="src">SME</span></li>
+      <li><span class="num">1% <small>of workers</small></span><span class="lbl">Mining's share of the global workforce. Its share of fatal accidents at work is about 8 percent.</span><span class="src">International Labour Organization</span></li>
+      <li><span class="num">38 <small>&rarr; 28</small></span><span class="lbl">US mining deaths in 2023 and 2024. Near an all-time low, and still a funeral every other week.</span><span class="src">MSHA</span></li>
+      <li><span class="num">30%</span><span class="lbl">Projected shortfall in copper supply by 2035 under current policies.</span><span class="src">IEA, 2025</span></li>
+      <li><span class="num">&times;0.5</span><span class="lbl">Change in mining labour productivity since the mid-1990s, while manufacturing more than doubled.</span><span class="src">McKinsey, OECD data</span></li>
+    </ul>
+
     <h3>And productivity has gone backwards</h3>
     <p>Over the same period that manufacturing more than doubled its labour productivity and agriculture grew by half, mining's fell by half. McKinsey attributes the slide to deeper pits, longer hauls, declining grades, and a lost decade of innovation, and warns that without a step change the industry cannot meet the demand above.</p>
 
     <figure class="chart">
-      <figcaption>Labour productivity by sector, 1997 to 2023 (1997 = 100)</figcaption>
-      <svg viewBox="0 0 560 190" role="img" aria-label="Bar chart: by 2023 manufacturing productivity index is about 210, agriculture about 155, mining about 50, against a 1997 baseline of 100">
-        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">
-          <!-- baseline at 100: x = 150 + 100*1.75 = 325 -->
-          <line x1="325" y1="8" x2="325" y2="160" stroke="var(--rule-strong)" stroke-dasharray="3 4"/>
-          <text x="325" y="180" text-anchor="middle" fill="var(--mute)" font-size="11">1997 = 100</text>
-
-          <text x="140" y="35" text-anchor="end" fill="var(--ink-2)">Manufacturing</text>
-          <rect x="150" y="22" width="367" height="18" fill="var(--rule-strong)"/>
-          <text x="522" y="35" fill="var(--ink-2)" font-size="12">×2</text>
-
-          <text x="140" y="85" text-anchor="end" fill="var(--ink-2)">Agriculture</text>
-          <rect x="150" y="72" width="271" height="18" fill="var(--rule-strong)"/>
-          <text x="426" y="85" fill="var(--ink-2)" font-size="12">×1.5</text>
-
-          <text x="140" y="135" text-anchor="end" fill="var(--ink)" font-weight="500">Mining</text>
-          <rect x="150" y="122" width="88" height="18" fill="var(--ink)"/>
-          <text x="243" y="135" fill="var(--ink)" font-size="12" font-weight="500">×0.5</text>
+      <figcaption>Productivity by industry, 1995 to 2024 (index, 1995 = 100)</figcaption>
+        <svg viewBox="0 0 620 320" role="img" aria-label="Line chart, productivity by industry indexed to 1995 = 100. Manufacturing rises to about 210 by 2024 and nine other industries land between about 120 and 180, while mining and quarrying drifts near 100 until the mid-2010s and then falls to about 50.">
+        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11" fill="var(--mute)">
+        <line x1="44" y1="261.3" x2="500" y2="261.3" stroke="var(--rule)" stroke-dasharray="2 4"/>
+        <text x="36" y="265.3" text-anchor="end">60</text>
+        <line x1="44" y1="200.0" x2="500" y2="200.0" stroke="var(--rule)"/>
+        <text x="36" y="204.0" text-anchor="end">100</text>
+        <line x1="44" y1="138.7" x2="500" y2="138.7" stroke="var(--rule)" stroke-dasharray="2 4"/>
+        <text x="36" y="142.7" text-anchor="end">140</text>
+        <line x1="44" y1="77.3" x2="500" y2="77.3" stroke="var(--rule)" stroke-dasharray="2 4"/>
+        <text x="36" y="81.3" text-anchor="end">180</text>
+        <line x1="44" y1="16.0" x2="500" y2="16.0" stroke="var(--rule)" stroke-dasharray="2 4"/>
+        <text x="36" y="20.0" text-anchor="end">220</text>
+        <text x="44.0" y="310" text-anchor="middle">1995</text>
+        <text x="201.2" y="310" text-anchor="middle">2005</text>
+        <text x="358.5" y="310" text-anchor="middle">2015</text>
+        <text x="500.0" y="310" text-anchor="middle">2024</text>
         </g>
-      </svg>
-      <p class="source">Source: McKinsey &amp; Company, <a href="https://www.mckinsey.com/industries/metals-and-mining/our-insights/unearthing-a-new-era-of-innovation-in-mining" target="_blank" rel="noopener">Unearthing a new era of innovation in mining</a> (December 2025), OECD data. Bars drawn from the report's stated multiples.</p>
+        <path d="M44.0 200.0 L59.7 207.7 L75.4 210.7 L91.2 200.0 L106.9 181.6 L122.6 157.1 L138.3 138.7 L154.1 111.1 L169.8 108.0 L185.5 103.4 L201.2 97.3 L217.0 85.0 L232.7 92.7 L248.4 89.6 L264.1 85.0 L279.9 77.3 L295.6 74.3 L311.3 72.7 L327.0 72.7 L342.8 69.7 L358.5 68.1 L374.2 66.6 L389.9 65.1 L405.7 65.1 L421.4 65.1 L437.1 68.1 L452.8 66.6 L468.6 68.1 L484.3 72.7 L500.0 78.9" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Information and communication: 179 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 196.9 L75.4 192.3 L91.2 184.7 L106.9 177.0 L122.6 166.3 L138.3 161.7 L154.1 154.0 L169.8 150.9 L185.5 141.7 L201.2 135.6 L217.0 123.3 L232.7 111.1 L248.4 104.9 L264.1 115.7 L279.9 111.1 L295.6 108.0 L311.3 100.3 L327.0 95.7 L342.8 89.6 L358.5 77.3 L374.2 69.7 L389.9 66.6 L405.7 71.2 L421.4 66.6 L437.1 65.1 L452.8 74.3 L468.6 69.7 L484.3 72.7 L500.0 78.9" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Financial and insurance: 179 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 195.4 L75.4 192.3 L91.2 184.7 L106.9 175.5 L122.6 169.3 L138.3 160.1 L154.1 157.1 L169.8 154.0 L185.5 147.9 L201.2 141.7 L217.0 138.7 L232.7 135.6 L248.4 138.7 L264.1 134.1 L279.9 126.4 L295.6 123.3 L311.3 120.3 L327.0 115.7 L342.8 114.1 L358.5 111.1 L374.2 108.0 L389.9 104.9 L405.7 101.9 L421.4 103.4 L437.1 100.3 L452.8 92.7 L468.6 89.6 L484.3 95.7 L500.0 97.3" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Wholesale and retail: 167 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 196.9 L75.4 190.8 L91.2 184.7 L106.9 177.0 L122.6 169.3 L138.3 163.2 L154.1 157.1 L169.8 149.4 L185.5 138.7 L201.2 129.5 L217.0 120.3 L232.7 115.7 L248.4 123.3 L264.1 127.9 L279.9 115.7 L295.6 111.1 L311.3 108.0 L327.0 104.9 L342.8 103.4 L358.5 101.9 L374.2 103.4 L389.9 100.3 L405.7 95.7 L421.4 92.7 L437.1 98.8 L452.8 92.7 L468.6 92.7 L484.3 100.3 L500.0 108.0" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Industry (excl. construction): 160 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 193.9 L75.4 190.8 L91.2 184.7 L106.9 178.5 L122.6 172.4 L138.3 166.3 L154.1 161.7 L169.8 157.1 L185.5 149.4 L201.2 141.7 L217.0 137.1 L232.7 134.1 L248.4 138.7 L264.1 131.0 L279.9 127.9 L295.6 123.3 L311.3 120.3 L327.0 118.7 L342.8 117.2 L358.5 115.7 L374.2 114.1 L389.9 111.1 L405.7 109.5 L421.4 108.0 L437.1 106.5 L452.8 104.9 L468.6 103.4 L484.3 108.0 L500.0 111.1" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Agriculture, forestry and fishing: 158 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 195.4 L75.4 190.8 L91.2 184.7 L106.9 177.0 L122.6 169.3 L138.3 163.2 L154.1 157.1 L169.8 152.5 L185.5 146.3 L201.2 141.7 L217.0 137.1 L232.7 134.1 L248.4 138.7 L264.1 135.6 L279.9 131.0 L295.6 126.4 L311.3 123.3 L327.0 120.3 L342.8 118.7 L358.5 115.7 L374.2 112.6 L389.9 111.1 L405.7 111.1 L421.4 109.5 L437.1 108.0 L452.8 104.9 L468.6 101.9 L484.3 108.0 L500.0 111.1" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Business services: 158 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 196.9 L75.4 193.9 L91.2 187.7 L106.9 181.6 L122.6 175.5 L138.3 169.3 L154.1 164.7 L169.8 160.1 L185.5 155.5 L201.2 150.9 L217.0 147.9 L232.7 144.8 L248.4 147.9 L264.1 144.8 L279.9 141.7 L295.6 138.7 L311.3 137.1 L327.0 135.6 L342.8 134.1 L358.5 132.5 L374.2 131.0 L389.9 129.5 L405.7 127.9 L421.4 126.4 L437.1 126.4 L452.8 123.3 L468.6 120.3 L484.3 123.3 L500.0 126.4" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Business economy: 148 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 198.5 L75.4 196.9 L91.2 193.9 L106.9 190.8 L122.6 187.7 L138.3 184.7 L154.1 181.6 L169.8 178.5 L185.5 175.5 L201.2 173.9 L217.0 172.4 L232.7 170.9 L248.4 172.4 L264.1 170.9 L279.9 169.3 L295.6 167.8 L311.3 169.3 L327.0 169.3 L342.8 167.8 L358.5 166.3 L374.2 164.7 L389.9 163.2 L405.7 161.7 L421.4 160.1 L437.1 158.6 L452.8 157.1 L468.6 155.5 L484.3 154.0 L500.0 154.0" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Professional, scientific and technical: 130 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 204.6 L75.4 207.7 L91.2 204.6 L106.9 200.0 L122.6 193.9 L138.3 200.0 L154.1 203.1 L169.8 200.0 L185.5 196.9 L201.2 187.7 L217.0 187.7 L232.7 183.1 L248.4 184.7 L264.1 192.3 L279.9 196.9 L295.6 200.0 L311.3 203.1 L327.0 193.9 L342.8 189.3 L358.5 184.7 L374.2 181.6 L389.9 178.5 L405.7 175.5 L421.4 173.9 L437.1 172.4 L452.8 170.9 L468.6 169.3 L484.3 170.9 L500.0 172.4" fill="none" stroke="var(--rule-strong)" stroke-width="1.2" stroke-linejoin="round"><title>Construction: 118 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 196.9 L75.4 190.8 L91.2 181.6 L106.9 173.9 L122.6 166.3 L138.3 163.2 L154.1 157.1 L169.8 147.9 L185.5 135.6 L201.2 123.3 L217.0 111.1 L232.7 104.9 L248.4 115.7 L264.1 108.0 L279.9 98.8 L295.6 91.1 L311.3 86.5 L327.0 83.5 L342.8 77.3 L358.5 72.7 L374.2 74.3 L389.9 66.6 L405.7 58.9 L421.4 51.3 L437.1 55.9 L452.8 52.8 L468.6 42.1 L484.3 19.1 L500.0 28.3" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-linejoin="round"><title>Manufacturing: 212 (2024)</title></path>
+        <path d="M44.0 200.0 L59.7 187.7 L75.4 183.1 L91.2 190.8 L106.9 196.9 L122.6 193.9 L138.3 184.7 L154.1 187.7 L169.8 184.7 L185.5 187.7 L201.2 186.2 L217.0 183.1 L232.7 189.3 L248.4 193.9 L264.1 187.7 L279.9 190.8 L295.6 193.9 L311.3 196.9 L327.0 192.3 L342.8 200.0 L358.5 209.2 L374.2 218.4 L389.9 223.0 L405.7 224.5 L421.4 230.7 L437.1 238.3 L452.8 242.9 L468.6 249.1 L484.3 258.3 L500.0 276.7" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><title>Mining and quarrying: 50 (2024)</title></path>
+        <circle cx="500.0" cy="276.7" r="3.5" fill="var(--ink)"/>
+        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">
+        <text x="508" y="32.3" fill="var(--ink-2)">Manufacturing</text>
+        <text x="508" y="115.1" fill="var(--mute)">Nine other</text><text x="508" y="129.1" fill="var(--mute)">industries</text>
+        <text x="508" y="280.7" fill="var(--ink)" font-weight="500">Mining</text>
+        </g></svg>
+      <p class="source">Source: McKinsey &amp; Company, <a href="https://www.mckinsey.com/industries/metals-and-mining/our-insights/unearthing-a-new-era-of-innovation-in-mining" target="_blank" rel="noopener">Unearthing a new era of innovation in mining</a> (December 2025), OECD data. Redrawn from the report's exhibit; values approximate. Mining and quarrying includes energy, water supply and waste management in the OECD series. Hover a line for its name.</p>
     </figure>
 
     <h3>The face has not changed</h3>
@@ -214,6 +254,13 @@
       <li><strong><a href="https://www.linkedin.com/in/kishan-muhundhan/" target="_blank" rel="noopener">Kishan Muhundhan</a></strong><span>Robotics hardware</span></li>
       <li><strong><a href="https://www.linkedin.com/in/shiv-patel-7946b91b4" target="_blank" rel="noopener">Shiv Patel</a></strong><span>Robotics hardware</span></li>
     </ul>
+
+    <h3>We have built underground robots before</h3>
+    <p>At The Boring Company's Not-a-Boring Competition we won the navigation challenge with an autonomous rover that found its way through a tunnel with no GPS and no one driving. The next year we came back and built Canada's first student-built micro tunnel boring machine in ten months, from a blank CAD file to a machine cutting through Texas dirt. That is the kind of underground work this team already knows how to do.</p>
+    <figure class="photo">
+      <img src="watdig.jpg" alt="The WatDIG team in hard hats and hi-vis vests standing in an excavated launch pit behind their black micro tunnel boring machine, with the WatDIG logo on the machine and on the jacking frame beside it." width="1600" height="826" loading="lazy">
+      <figcaption>The WatDIG team and machine in the launch pit at the Not-a-Boring Competition.</figcaption>
+    </figure>
   </section>
 
 </div>
