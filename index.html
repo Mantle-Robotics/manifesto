@@ -108,59 +108,126 @@
 <div class="wrap" id="top">
 
   <header class="hero">
-    <h1>Automate underground drills. Then the whole mine.</h1>
-    <p>Underground mining has stayed stagnant and archaic for the last 50 years, while technology, and robotics in particular, has advanced rapidly. We are going to change that. First, retrofit kits that automate the jumbo drills mines already own. Then every other task in the drill and blast cycle, so the whole cycle runs faster. Eventually, a mine with no one in it, which no longer has to plan around shift changes, travel time, fatigue, or keeping people safe underground, because there is nobody underground.</p>
+    <h1>Autonomy kits for the machines already in the mine.</h1>
+    <p>Underground mining works almost the same way it did fifty years ago. The machines got bigger and went electric, but there is still a person at the face running them. We're building retrofit kits that make the jumbo drills mines already own run on their own. After the drill, we'll do the same for every other machine in the drill and blast cycle, until nobody has to be underground.</p>
   </header>
 
   <section id="manifesto">
     <p class="eyebrow">Manifesto</p>
-    <h2>Real work, not demos</h2>
+    <h2>Robots are for doing work</h2>
 
-    <p class="lede">The most valuable robots are not the ones that look the most like people. They are the ones that quietly finish a shift.</p>
+    <p>Robotics right now is in its demo era. Humanoids fold laundry on stage, and every few weeks there's a new model picking cups up off a table. The videos look great. Very little of it is producing anything.</p>
 
-    <p>Robotics is having its demo era. Humanoids fold laundry on stage and general-purpose models pick objects off tables. We think the field's real test is different: can a machine take over a job that is dangerous, repetitive, and paid for by the hour, in an environment that fights it? Underground hard rock mining is that test. It is dark, wet, dusty, GPS-denied, and unforgiving of failure.</p>
+    <p>We think the goal of robotics is to eliminate human labour. A robot is a tool, and a tool is worth what it produces. So the question we ask about any robot is simple: how much work does it get done with no one there?</p>
+
+    <p>Mines are already full of machines that do real work. Jumbos, bolters, scoops, charging rigs. They're proven, they're paid for, and they were built to survive underground. The one thing they can't do is run without someone in the seat or on the remote. That's the part we build. We don't need to invent a new robot for the mine. The robots are already down there. We just have to let them work by themselves.</p>
 
     <h3>Zero people in the tunnel</h3>
-    <p>The Boring Company built its tunnelling program around a single constraint: zero people in the tunnel. It is not a safety slogan. It is a design methodology. When you refuse to let a person into the workspace, every task has to be re-examined, instrumented, and handed to a machine, and the system that emerges is faster and cheaper than the one it replaced, because it was never designed around a human's reach, sight, and shift length.</p>
-    <p>Two of us worked in those tunnels alongside ex-miners. We want to bring that constraint, and that way of thinking, to the mine.</p>
+    <p>At The Boring Company the rule was zero people in the tunnel. Two of us worked there, next to ex-miners. The rule sounds like a safety policy, but it's really an engineering constraint. If no one is allowed in, you have to go through every single task and figure out how a machine does it. What you end up with is faster and cheaper than the old process, because it was never designed around what a person can reach, see, or get through in a shift.</p>
+    <p>We want to bring that rule to mining: zero people in the mine.</p>
 
     <blockquote>
       <p>Zero people at the face. Then zero people in the heading. Then zero people underground.</p>
-      <cite>The order of operations</cite>
+      <cite>How we get there</cite>
     </blockquote>
 
     <h3>Start with the drill</h3>
-    <p>A retrofit kit is the honest first step. Mines already own working jumbos and cannot justify replacing them. So automate what is there: perception, boom control, and pattern execution bolted onto the rig a crew already trusts, with the operator moved out of the face and eventually out of the loop.</p>
+    <p>Mines aren't going to scrap working jumbos to buy new autonomous ones, and most of them couldn't afford to. So we start with what's already there. We add the sensors, perception, and boom control to the rig the mine already runs, and it drills the pattern on its own.</p>
 
-    <h3>Then the whole mine</h3>
-    <p>Drilling is one step in a cycle: drill, charge, blast, ventilate, muck, scale, bolt, repeat. Once the drill is autonomous, the next step is the layer that sequences all of them: an orchestration system that dispatches a fleet of specialized machines through the cycle, understands the state of every heading, predicts where the cycle will stall, and controls it. Digitize the mine, then run it lights out.</p>
+    <h3>Then the rest of the cycle</h3>
+    <p>Drilling is one step. The full cycle is drill, charge, blast, ventilate, muck, scale, bolt, and repeat. Once the drill runs itself, we automate the other machines in the cycle. Then we build the software that runs all of them together. It knows the state of every heading, sees where the cycle is about to stall, and sends in the right machine. At that point the mine doesn't need anyone underground.</p>
   </section>
 
   <section id="deepdive">
     <p class="eyebrow">The problem</p>
-    <h2>Demand is going one way. The workforce is going the other.</h2>
+    <h2>Mines have to produce more metal with fewer people</h2>
 
-    <h3>Everything modern is made of rock</h3>
-    <p>Electric vehicles, grid batteries, transmission lines, wind turbines, and the data centres behind AI all run on copper, lithium, nickel, cobalt, and rare earths. There is no software substitute for a tonne of copper. The IEA expects lithium demand to grow fivefold by 2040 and projects a 30 percent shortfall in copper supply by 2035 under current policies, with roughly $500 billion of new mining investment needed to close the gap. A large share of that metal sits in hard rock orebodies that can only be reached underground.</p>
+    <h3>Demand is going up</h3>
+    <p>EVs, grid batteries, transmission lines, wind turbines, and the data centres running AI all need copper, lithium, nickel, cobalt, and rare earths. You can't write software to replace a tonne of copper. The IEA expects lithium demand to grow fivefold by 2040 and projects a 30 percent shortfall in copper supply by 2035 under current policies. Closing that gap takes roughly $500 billion in new mining investment, and a lot of the metal is in hard rock orebodies that you can only reach underground.</p>
 
-    <h3>The people who know how to get it out are leaving</h3>
-    <p>In the United States alone, the Society for Mining, Metallurgy &amp; Exploration expects 221,000 mining workers to retire by 2029. That is more than half the country's mining workforce. Fewer people are entering than leaving, and the ones leaving carry decades of judgement about rock that has never been written down. Mines will have to produce more metal with fewer people underground whether or not anyone builds the machines to do it.</p>
+    <h3>The workforce is going down</h3>
+    <p>In the US alone, the Society for Mining, Metallurgy &amp; Exploration expects 221,000 mining workers to retire by 2029. That's more than half the country's mining workforce. Fewer people are coming in than leaving, and the ones leaving take decades of experience with them that was never written down anywhere.</p>
 
-    <h3>More is being asked of mining than ever</h3>
-    <p>The pressure is coming from two directions at once. A technology-fuelled fourth industrial revolution is pulling on the supply side: every data centre, battery, motor, and transmission line is a claim on metal that has to come out of the ground. And societal expectations are rising on the other side: less land disturbed, less water and energy per tonne, fewer people put in harm's way, and a licence to operate that has to be re-earned every year. To meet the growing demand for metals and minerals, the industry needs to deliver more of them, and do so more efficiently, more safely, and with a smaller footprint. It cannot do that by adding people, and it cannot do that with the workflow it has.</p>
+    <h3>Why not just hire more people?</h3>
+    <p>This is the obvious answer, and it doesn't work. Underground mining is remote and dangerous, and mines are competing for the same small pool of people. Even when a mine does find someone, it takes years to train them to run a jumbo well, and the people who would train them are the ones retiring.</p>
+    <p>Canada is in the same spot. The Mining Industry Human Resources Council expects the Canadian industry to need about 191,000 hires between 2024 and 2034, and says that by 2034 close to a quarter of them will be hard to fill.</p>
+    <p>Opening new mines doesn't fix it either. In the US it takes 29 years on average to go from discovery to production, and in Canada it takes 27. Every new mine also needs its own crew. Bigger machines move more rock per hour, but they still need an operator. Every option that keeps a person in the loop runs into the same wall: there aren't enough people.</p>
 
-    <h3>The numbers behind the problem</h3>
+    <figure class="chart">
+      <figcaption>Average years from discovery to production for a new mine</figcaption>
+      <svg viewBox="0 0 620 176" role="img" aria-label="Horizontal bar chart of average mine development time: Zambia 34 years, United States 29 years, Canada 27 years, Australia 20 years.">
+        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">
+          <text x="110" y="30" text-anchor="end" fill="var(--ink-2)">Zambia</text>
+          <rect x="120" y="14" width="400" height="24" fill="var(--rule-strong)"/>
+          <text x="528" y="30" fill="var(--ink-2)">34</text>
+
+          <text x="110" y="72" text-anchor="end" fill="var(--ink)" font-weight="500">United States</text>
+          <rect x="120" y="56" width="341" height="24" fill="var(--ink)"/>
+          <text x="469" y="72" fill="var(--ink)" font-weight="500">29</text>
+
+          <text x="110" y="114" text-anchor="end" fill="var(--ink)" font-weight="500">Canada</text>
+          <rect x="120" y="98" width="318" height="24" fill="var(--ink)"/>
+          <text x="446" y="114" fill="var(--ink)" font-weight="500">27</text>
+
+          <text x="110" y="156" text-anchor="end" fill="var(--ink-2)">Australia</text>
+          <rect x="120" y="140" width="235" height="24" fill="var(--rule-strong)"/>
+          <text x="363" y="156" fill="var(--ink-2)">20</text>
+        </g>
+      </svg>
+      <p class="source">Source: S&amp;P Global Market Intelligence, <a href="https://press.spglobal.com/2024-07-18-United-States-Ranks-Next-to-Last-in-Development-Time-for-New-Mines-that-Produce-Critical-Minerals-for-Energy-Transition,-S-P-Global-Finds" target="_blank" rel="noopener">Mine development times: the US in perspective</a> (2024). The US and Canada are the second and third slowest countries in the study.</p>
+    </figure>
+    <p>The only way to grow what a mine produces without growing the number of people it needs underground is machines that work without people. That's why we think automation is the only real solution.</p>
+
+    <h3>The numbers</h3>
     <ul class="stats">
       <li><span class="num">29 <small>years</small></span><span class="lbl">Average time from discovery to production for a new mine in the United States. Canada is 27. Only Zambia is slower.</span><span class="src">S&amp;P Global, 2024</span></li>
       <li><span class="num">221,000</span><span class="lbl">US mining workers expected to retire by 2029, more than half the workforce.</span><span class="src">SME</span></li>
       <li><span class="num">1% <small>of workers</small></span><span class="lbl">Mining's share of the global workforce. Its share of fatal accidents at work is about 8 percent.</span><span class="src">International Labour Organization</span></li>
-      <li><span class="num">38 <small>&rarr; 28</small></span><span class="lbl">US mining deaths in 2023 and 2024. Near an all-time low, and still a funeral every other week.</span><span class="src">MSHA</span></li>
+      <li><span class="num">40 <small>&rarr; 28 &rarr; 33</small></span><span class="lbl">US mining deaths in 2023, 2024 and 2025. Close to an all-time low, and still about one every two weeks.</span><span class="src">MSHA</span></li>
       <li><span class="num">30%</span><span class="lbl">Projected shortfall in copper supply by 2035 under current policies.</span><span class="src">IEA, 2025</span></li>
-      <li><span class="num">&times;0.5</span><span class="lbl">Change in mining labour productivity since the mid-1990s, while manufacturing more than doubled.</span><span class="src">McKinsey, OECD data</span></li>
+      <li><span class="num">&times;0.5</span><span class="lbl">Change in mining labour productivity since the mid-1990s. Manufacturing more than doubled over the same period.</span><span class="src">McKinsey, OECD data</span></li>
+      <li><span class="num">18 <small>&rarr; 0</small></span><span class="lbl">Major copper discoveries worldwide in 1997, the peak year, and in 2023.</span><span class="src">S&amp;P Global</span></li>
+      <li><span class="num">1.27% <small>&rarr; 0.86%</small></span><span class="lbl">Average grade of copper ore mined in Chile, 2000 to 2011. About a third less copper in every tonne of rock.</span><span class="src">Farías et al., 2016</span></li>
+      <li><span class="num">191,000</span><span class="lbl">Hires the Canadian mining industry needs between 2024 and 2034. Close to a quarter will be hard to fill.</span><span class="src">MiHR, 2024</span></li>
+      <li><span class="num">69%</span><span class="lbl">Share of deaths in US underground metal mines since 2000 caused by powered haulage or falls of ground.</span><span class="src">NIOSH</span></li>
     </ul>
 
-    <h3>And productivity has gone backwards</h3>
-    <p>Over the same period that manufacturing more than doubled its labour productivity and agriculture grew by half, mining's fell by half. McKinsey attributes the slide to deeper pits, longer hauls, declining grades, and a lost decade of innovation, and warns that without a step change the industry cannot meet the demand above.</p>
+    <h3>The easy ore is gone</h3>
+    <p>The deposits that are left are deeper, lower grade, and harder to find. In 1997 the industry made 18 major copper discoveries. Since 2010 most years have had fewer than five, and 2023 had none. The ore that does get mined holds less metal: in Chile, the world's largest copper producer, the average grade fell by about a third in just over a decade. Lower grade means moving more rock for every tonne of copper, and deeper deposits mean more of that rock comes from underground.</p>
+
+    <h3>Underground is where people get hurt</h3>
+    <p>Most people killed in underground metal mines are killed by the work itself: driving and working around mobile equipment, or standing under ground that hasn't been supported yet. Those are exactly the jobs in the drill and blast cycle. Every task a machine takes over at the face is one less person in the places where people die.</p>
+
+    <figure class="chart">
+      <figcaption>Deaths in US underground metal mines by cause, 2000 to 2023</figcaption>
+      <svg viewBox="0 0 620 218" role="img" aria-label="Horizontal bar chart of fatalities in US underground metal mines, 2000 to 2023: powered haulage 41 percent, fall of ground 29 percent, explosives 8 percent, machinery 8 percent, all other causes 14 percent.">
+        <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12">
+          <text x="150" y="30" text-anchor="end" fill="var(--ink)" font-weight="500">Powered haulage</text>
+          <rect x="160" y="14" width="326" height="24" fill="var(--ink)"/>
+          <text x="494" y="30" fill="var(--ink)" font-weight="500">41%</text>
+
+          <text x="150" y="72" text-anchor="end" fill="var(--ink)" font-weight="500">Fall of ground</text>
+          <rect x="160" y="56" width="229" height="24" fill="var(--ink)"/>
+          <text x="397" y="72" fill="var(--ink)" font-weight="500">29%</text>
+
+          <text x="150" y="114" text-anchor="end" fill="var(--ink)" font-weight="500">Explosives</text>
+          <rect x="160" y="98" width="66" height="24" fill="var(--ink)"/>
+          <text x="234" y="114" fill="var(--ink)" font-weight="500">8%</text>
+
+          <text x="150" y="156" text-anchor="end" fill="var(--ink-2)">Machinery</text>
+          <rect x="160" y="140" width="66" height="24" fill="var(--rule-strong)"/>
+          <text x="234" y="156" fill="var(--ink-2)">8%</text>
+
+          <text x="150" y="198" text-anchor="end" fill="var(--ink-2)">All other causes</text>
+          <rect x="160" y="182" width="114" height="24" fill="var(--rule-strong)"/>
+          <text x="282" y="198" fill="var(--ink-2)">14%</text>
+        </g>
+      </svg>
+      <p class="source">Source: NIOSH Mine and Mine Worker Charts, <a href="https://wwwn.cdc.gov/NIOSH-Mining/MMWC/Fatality/Count?StartYear=2000&amp;EndYear=2023&amp;SelectedMineType=1&amp;SelectedCommodity=2&amp;SelectedCommodity=3&amp;SelectedCommodity=4&amp;SelectedCommodity=5&amp;SelectedCommodity=6" target="_blank" rel="noopener">occupational fatalities by accident class at underground mining locations, metal operators, 2000 to 2023</a> (49 deaths). MSHA accident classes.</p>
+    </figure>
+
+    <h3>Productivity has gone backwards</h3>
+    <p>Since 1995, manufacturing more than doubled its labour productivity and agriculture grew by about half. Mining's dropped by half. McKinsey puts it down to deeper mines, longer hauls, lower grades, and a decade with almost no new technology, and says the industry can't meet demand without a major change in how it works.</p>
 
     <figure class="chart">
       <figcaption>Productivity by industry, 1995 to 2024 (index, 1995 = 100)</figcaption>
@@ -201,43 +268,43 @@
       <p class="source">Source: McKinsey &amp; Company, <a href="https://www.mckinsey.com/industries/metals-and-mining/our-insights/unearthing-a-new-era-of-innovation-in-mining" target="_blank" rel="noopener">Unearthing a new era of innovation in mining</a> (December 2025), OECD data. Redrawn from the report's exhibit; values approximate. Mining and quarrying includes energy, water supply and waste management in the OECD series. Hover a line for its name.</p>
     </figure>
 
-    <h3>The face has not changed</h3>
-    <p>The machines at the drill face have gotten bigger, electric, and better instrumented. The workflow around them has not moved. A person still stands at the face, aligns the boom by eye, drills the pattern, charges it, retreats, and waits for the blast. The drill-and-blast cycle that produces most of the world's hard rock metal is run the way it was run fifty years ago, with better hardware and the same human in the same place.</p>
+    <h3>The face hasn't changed</h3>
+    <p>Sandvik and Epiroc do sell automated drilling, and on a new top-end rig it works. But most small and mid-tier mines run older machines that don't have it. On those rigs, a person still stands at the face, lines up the boom by eye, drills the pattern, charges the holes, backs out, and waits for the blast.</p>
 
     <h3>What operators told us</h3>
-    <p>We have spoken with over a dozen people who run or have run underground operations. The automation the incumbents sell is priced for a new multi-million dollar machine, not for the fleet a mid-tier mine already runs.</p>
+    <p>We've talked to more than a dozen people who run or have run underground operations. The automation Sandvik and Epiroc sell comes with a new multi-million dollar machine. That works for a big mine buying a new fleet. It doesn't work for a mid-tier mine running rigs it bought ten years ago.</p>
 
-    <h3>Everyone is chasing the surface</h3>
-    <p>The autonomy that exists in mining is mostly above ground: haul trucks on open-pit ramps, surface drill rigs on flat benches. That is the low-hanging fruit, and it is largely picked. Underground is harder, so it has been left alone. That is exactly why it is worth doing.</p>
+    <h3>Most of the focus is on the surface</h3>
+    <p>Most of the autonomy work in mining so far has gone into the surface: haul trucks on open-pit ramps and drill rigs on flat benches. Those are easier problems, with GPS, open sky, and room to move. Underground has had much less attention.</p>
 
-    <h3>Why a retrofit, not a new machine</h3>
-    <p>The incumbents (Sandvik, Epiroc, and the automation firms they have acquired) sell autonomy bundled with new equipment. A mid-tier mine running older rigs has no path to it. A kit that fits the machines already on site is the only way that mine gets automated this decade.</p>
-    <p>Each kit is also a sensor. Every hole drilled teaches us the rock, the rig, and the cycle. Because we are not an equipment maker, we can sit across every brand on site, which is a data position the equipment makers cannot take.</p>
+    <h3>Why a retrofit</h3>
+    <p>If autonomy only comes with a new machine, most mines won't get it this decade. A kit that fits the rigs already on site is the fastest way to get it into the mines that actually need it.</p>
+    <p>Every kit also collects data. Each hole we drill tells us more about the rock, the rig, and the cycle. And because we don't sell equipment, we can go on every brand of machine at the site. The equipment makers can't do that.</p>
   </section>
 
   <section id="goals">
     <p class="eyebrow">Goals</p>
-    <h2>What we want to prove</h2>
+    <h2>What we're doing, in order</h2>
     <ul class="goals">
       <li>
         <span class="when">First</span>
         <div>
           <strong>Drill a pattern with no one at the face</strong>
-          <p>A retrofit kit on a real jumbo, at a real test mine, executing a drill pattern with the operator out of the heading.</p>
+          <p>Our kit on a real jumbo at a real test mine, drilling a full pattern with the operator out of the heading.</p>
         </div>
       </li>
       <li>
         <span class="when">Then</span>
         <div>
           <strong>Run one full cycle</strong>
-          <p>Drill, charge, blast, muck, scale, bolt, with a specialized machine handling each step and a person only supervising.</p>
+          <p>Drill, charge, blast, muck, scale, and bolt, with a machine doing each step and a person only supervising.</p>
         </div>
       </li>
       <li>
         <span class="when">Eventually</span>
         <div>
-          <strong>Run a heading lights out</strong>
-          <p>An orchestration layer that knows the state of every heading, predicts the next stall, and dispatches the fleet through the cycle without a person underground.</p>
+          <strong>Run a heading with nobody underground</strong>
+          <p>Software that tracks every heading, catches stalls before they happen, and sends the fleet through the cycle on its own.</p>
         </div>
       </li>
     </ul>
@@ -245,8 +312,8 @@
 
   <section id="team">
     <p class="eyebrow">Team</p>
-    <h2>Five engineers who have been underground</h2>
-    <p>We are mechatronics engineering students at the University of Waterloo. We co-founded and built WatDIG, Canada's first student tunnel boring machine, and won The Boring Company's underground autonomous navigation challenge with it. Between us we have worked at Tesla, The Boring Company, Impossible Metals, Hermeus, Ford, and Clearpath, building autonomous machines for tunnels, the deep sea, and the factory floor.</p>
+    <h2>Team</h2>
+    <p>We're five mechatronics engineering students at the University of Waterloo. We co-founded WatDIG, Canada's first student tunnel boring machine team, and won The Boring Company's underground autonomous navigation challenge. Between us we've worked at Tesla, The Boring Company, Impossible Metals, Hermeus, Ford, and Clearpath, building autonomous machines for tunnels, the deep sea, and factories.</p>
     <ul class="team">
       <li><strong><a href="https://www.linkedin.com/in/matthew-bridger-2a4b79253" target="_blank" rel="noopener">Matthew Bridger</a></strong><span>Hydraulics &amp; field</span></li>
       <li><strong><a href="https://www.linkedin.com/in/jivankesan" target="_blank" rel="noopener">Jivan Kesan</a></strong><span>Software &amp; autonomy</span></li>
@@ -255,8 +322,9 @@
       <li><strong><a href="https://www.linkedin.com/in/shiv-patel-7946b91b4" target="_blank" rel="noopener">Shiv Patel</a></strong><span>Robotics hardware</span></li>
     </ul>
 
-    <h3>We have built underground robots before</h3>
-    <p>At The Boring Company's Not-a-Boring Competition we won the navigation challenge with an autonomous rover that found its way through a tunnel with no GPS and no one driving. The next year we came back and built Canada's first student-built micro tunnel boring machine in ten months, from a blank CAD file to a machine cutting through Texas dirt. That is the kind of underground work this team already knows how to do.</p>
+    <h3>What we've built</h3>
+    <p>At The Boring Company's Not-a-Boring Competition, we won the navigation challenge with an autonomous rover that drove itself through a tunnel with no GPS. The next year we came back with Canada's first student-built micro tunnel boring machine.</p>
+    <p>Starting a design team from nothing is a lot like starting a company. We had a $40,000 budget and ten months. We recruited the best engineers we knew at Waterloo and grew the team to 30 students, all of us building it while in school or on internships. In those ten months we went from an empty CAD file to a two-tonne machine with 100,000 lbs of thrust and six times the torque of a BMW M4, cutting through dirt in Texas. That's how we plan to build Mantle.</p>
     <figure class="photo">
       <img src="watdig.png" alt="The WatDIG team in hard hats and hi-vis vests standing in an excavated launch pit behind their black micro tunnel boring machine, with the WatDIG logo on the machine and on the jacking frame beside it." width="1600" height="826" loading="lazy">
       <figcaption>The WatDIG team and machine in the launch pit at the Not-a-Boring Competition.</figcaption>
